@@ -19,7 +19,7 @@ npm install
 
 ### 2. 配置 MySQL
 
-本地数据库：**localhost:3306**，库名 **night**。  
+本地数据库：**localhost:3306**，库名 **Night**。  
 复制 `.env.local.example` 为 `.env.local`，把 `你的密码` 改成实际密码。
 
 ### 3. 建库与建表
@@ -28,10 +28,10 @@ npm install
 
 ```sql
 -- 1. 建库
-CREATE DATABASE IF NOT EXISTS night DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE IF NOT EXISTS Night DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- 2. 使用该库
-USE night;
+USE Night;
 
 -- 3. 建表
 CREATE TABLE IF NOT EXISTS vocabulary (
