@@ -8,6 +8,11 @@ export type VocabularyRow = {
   pronunciation: string | null;
 };
 
+/** 带例句的词汇行（用于练习页） */
+export type VocabularyRowWithExample = VocabularyRow & {
+  example: string | null;
+};
+
 /** 建表（库需已存在）。可单独执行一次初始化。 */
 export async function createTable(): Promise<void> {
   const sql = `
@@ -60,4 +65,12 @@ export async function getList(): Promise<VocabularyRow[]> {
     "SELECT id, word, meaning, pronunciation FROM vocabulary ORDER BY created_at DESC"
   );
   return rows as VocabularyRow[];
+}
+
+/** 查询带例句的词汇列表（用于根据提示完成句子练习） */
+export async function getListWithExamples(): Promise<VocabularyRowWithExample[]> {
+  const [rows] = await pool.query<RowDataPacket[]>(
+    "SELECT id, word, meaning, pronunciation, example FROM vocabulary ORDER BY created_at DESC"
+  );
+  return rows as VocabularyRowWithExample[];
 }

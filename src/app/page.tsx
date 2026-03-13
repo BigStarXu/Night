@@ -6,10 +6,10 @@ export default function Home() {
       <main className="mx-auto max-w-4xl px-4 py-16">
         <section className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-5xl">
-            用 Night 轻松学语言
+            Night
           </h1>
           <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-400">
-            背单词、做练习，数据存储在 MySQL，多设备随时继续。
+            make study easier
           </p>
         </section>
 
@@ -44,7 +44,7 @@ export default function Home() {
           </Link>
         </section>
 
-        <section className="mt-16 rounded-2xl border border-zinc-200 bg-zinc-50/50 p-6 dark:border-zinc-800 dark:bg-zinc-900/50">
+        <section className="hidden mt-16 rounded-2xl border border-zinc-200 bg-zinc-50/50 p-6 dark:border-zinc-800 dark:bg-zinc-900/50">
           <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
             技术栈
           </h2>
